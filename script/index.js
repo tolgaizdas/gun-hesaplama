@@ -15,8 +15,8 @@ calculateButton.addEventListener("click", function () {
     var diff = Math.abs(endingDate.getTime() - startingDate.getTime());
     var dayNumber = diff / (1000 * 3600 * 24);
     var dateInYears = Math.floor(dayNumber / 365);
-    var dateInMonths = Math.floor((dayNumber - (dateInYears * 365)) / 30);
-    var dateInDays = dayNumber - dateInYears * 365 - dateInMonths * 30;
+    var dateInMonths = Math.floor((dayNumber - (dateInYears * 365)) / 31);
+    var dateInDays = dayNumber - dateInYears * 365 - dateInMonths * 31;
 
     let daysLabel = document.getElementById("days");
     daysLabel.textContent = "Girdiğiniz Tarihler Arasındaki Gün Sayısı: " + dayNumber;
